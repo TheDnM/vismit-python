@@ -30,7 +30,18 @@ class PasswordGenerator:
 			passphrase += string2[:len(string1)-1:-1]
 		return passphrase
 
+	def __chunked_hashed_passphrase(self):
+		hashed_passphrase = hashlib.sha256(self.fused_words.encode()).hexdigest()[:60]
+		chunk_size = 60//self.key_len
 
+		final_chunks = list()
+		i = 0
+		start = 0
+		while(i<self.key_len):
+			final_chunks.append(hashed_passphrase[start:start+chunk_size])
+			start+=chunk_size
+			i+=1
+		return final_chunks
 
 	def __encodeList(self, chp):
 		encrypted_password = ''
