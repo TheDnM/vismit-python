@@ -3,8 +3,9 @@
 ![pip version](https://img.shields.io/pypi/v/vismit-python) ![license](https://img.shields.io/pypi/l/vismit-python) [![Downloads](https://pepy.tech/badge/vismit-python)](https://pepy.tech/project/vismit-python)  
 
 
-An application that uses hashing and encoding for generating a random password. The application asks for the website/app name, secret key, and key length. Website/App name is variable. Your secret key and the key length is constant for every app/website. The crucial thing is your secret key, and key length should be private and unforgettable. After filling these columns, you get a "passphrase".
+An application that uses hashing and encoding for generating a random password. 
 
+Read more about this - http://ijsrset.com/paper/6777.pdf
 
 ### Installation
 `
